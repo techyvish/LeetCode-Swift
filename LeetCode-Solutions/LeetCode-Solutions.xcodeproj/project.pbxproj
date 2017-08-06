@@ -11,6 +11,8 @@
 		C91778BF1F2ACF0D00A7587E /* BitManupulations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91778BE1F2ACF0D00A7587E /* BitManupulations.swift */; };
 		C91778C11F2AD87200A7587E /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91778C01F2AD87200A7587E /* LinkedList.swift */; };
 		C91C4BEB1F2FABF900748127 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91C4BEA1F2FABF900748127 /* Matrix.swift */; };
+		C9B1B9DF1F36CA9D00CEB863 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */; };
+		C9B1B9E11F36DD6D00CEB863 /* StringAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,8 @@
 		C91778BE1F2ACF0D00A7587E /* BitManupulations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitManupulations.swift; sourceTree = "<group>"; };
 		C91778C01F2AD87200A7587E /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		C91C4BEA1F2FABF900748127 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlgorithms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				C91778BE1F2ACF0D00A7587E /* BitManupulations.swift */,
 				C91778C01F2AD87200A7587E /* LinkedList.swift */,
 				C91C4BEA1F2FABF900748127 /* Matrix.swift */,
+				C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */,
+				C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */,
 			);
 			path = "LeetCode-Solutions";
 			sourceTree = "<group>";
@@ -128,6 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B1B9E11F36DD6D00CEB863 /* StringAlgorithms.swift in Sources */,
+				C9B1B9DF1F36CA9D00CEB863 /* Tree.swift in Sources */,
 				C91C4BEB1F2FABF900748127 /* Matrix.swift in Sources */,
 				C91778C11F2AD87200A7587E /* LinkedList.swift in Sources */,
 				C91778BF1F2ACF0D00A7587E /* BitManupulations.swift in Sources */,

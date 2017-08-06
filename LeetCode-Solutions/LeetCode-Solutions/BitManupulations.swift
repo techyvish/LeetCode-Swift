@@ -30,5 +30,10 @@ func hammingWeight(_ n:Int) -> Int  {
     return count
 }
 
+func reverseBits() -> Int {
+    
+    return 0
+}
+
 
 
