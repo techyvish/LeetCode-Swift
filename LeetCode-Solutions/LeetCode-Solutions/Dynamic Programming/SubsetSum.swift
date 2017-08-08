@@ -20,9 +20,8 @@ struct SubsetSum {
 
     static func subsetSum( input:[Int], total: Int ) -> Bool {
         
-        let c = input.count + 1
-        let a = [Bool](repeating:false, count:c)
-        var dp = [[Bool]](repeating:a, count:total)
+        let a  = [Bool](repeating:false, count:total + 1)
+        var dp = [[Bool]](repeating:a, count:input.count + 1)
         
         for i in 1...input.count {
             dp[i][0] = true
