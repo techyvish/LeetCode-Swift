@@ -9,8 +9,12 @@
 import Foundation
 
 
-struct RabitKarpSearch {
+struct RabinKarpSearch {
     
-    
+    func patternExist(_ string:String,_ pattern:String) -> Int {
+        
+        
+        return -1
+    }
     
 }

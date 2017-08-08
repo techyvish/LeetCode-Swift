@@ -8,6 +8,12 @@
 
 import Foundation
 
+
+let subsetSumResult = SubsetSum.subsetSum(input: [2,3,5,6], total: 8)
+
+let rabinKarp = RabinKarpSearch()
+let rabinKarpResult = rabinKarp.patternExist("abcdefghi","ghi")
+
 let a = hammingDistance(1, 4)
 print(a)
 
