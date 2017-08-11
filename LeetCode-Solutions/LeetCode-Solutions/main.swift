@@ -9,6 +9,9 @@
 import Foundation
 
 
+let stringManip_1 = StringManipulations.shiftString(k: 5, s: "HackerEarth")
+print(stringManip_1)
+
 let subsetSumResult = SubsetSum.subsetSum(input: [2,3,5,6], total: 8)
 
 let rabinKarp = RabinKarpSearch()
