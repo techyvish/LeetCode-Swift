@@ -29,10 +29,11 @@ struct SubsetSum {
         
         for i in 1...input.count {
             for j in 1...total {
-                if ( j - input[i-1] >= 0 ){
-                    dp[i][j] = dp[i-1][j] || dp[i-1][j-input[i-1]]
-                }else {
+                
+                if ( j < input[i-1] ) {
                     dp[i][j] = dp[i-1][j]
+                } else {
+                    dp[i][j] = dp[i-1][j] || dp[i-1][j-input[i-1]]
                 }
             }
         }

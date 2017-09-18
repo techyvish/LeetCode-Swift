@@ -9,6 +9,15 @@
 import Foundation
 
 
+let n = ClimbStairs.numOfWays(n: 1)
+print(n)
+
+//let tree = buildTree()
+//let maxd = TreeSolutions.maximumDepth(tree)
+//let k = TreeSolutions.diameter(tree)
+//print(k)
+/*
+
 let stringManip_1 = StringManipulations.shiftString(k: 5, s: "HackerEarth")
 print(stringManip_1)
 
@@ -35,3 +44,4 @@ bb.next = cc
 cc.next = dd
 let ee = reverseList(aa)
 
+*/
