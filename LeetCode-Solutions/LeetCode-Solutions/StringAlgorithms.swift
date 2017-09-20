@@ -28,3 +28,8 @@ import Foundation
 //    }
 //    
 //}
+
+
+func addBinary(_ a: String, _ b: String) -> String {
+    return ""
+}

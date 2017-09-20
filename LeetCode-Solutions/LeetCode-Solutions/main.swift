@@ -8,9 +8,43 @@
 
 import Foundation
 
+/*
+var a = [9,9,9]
+let k = plusOne(a)
+print(k)
+*/
 
-let n = ClimbStairs.numOfWays(n: 1)
-print(n)
+/*
+var a = [1,0,2,3,4,0,5]
+moveZerosOptimized(&a)
+print(a)
+*/
+
+/*
+let a1 = ListNode(1)
+let b1 = ListNode(3)
+let c1 = ListNode(5)
+
+a1.next = b1
+b1.next = c1
+
+let a2 = ListNode(2)
+let b2 = ListNode(4)
+let c2 = ListNode(6)
+
+a2.next = b2
+b2.next = c2
+
+var l = mergeTwoListsIterative(a1, a2)
+while ( l != nil) {
+    print(l?.val ?? "")
+    l = l?.next
+}
+*/
+
+
+//let n = ClimbStairs.numOfWays(n: 1)
+//print(n)
 
 //let tree = buildTree()
 //let maxd = TreeSolutions.maximumDepth(tree)
