@@ -28,5 +28,5 @@ func maximumSubarray(_ a: [Int] ) -> Int {
     }
 
     return max_so_far
-    
+
 }
