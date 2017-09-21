@@ -8,8 +8,14 @@
 
 import Foundation
 
+
+let a = maximumSubarray([-2, -3, 4, -1, -2, 1, 5, -3])
+print(a)
+
+/*
 let k = getSum(3,2)
 print(k)
+*/
 
 /*
 var a = [9,9,9]

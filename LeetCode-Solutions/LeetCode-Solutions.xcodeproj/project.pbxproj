@@ -15,6 +15,7 @@
 		C9B1B9DF1F36CA9D00CEB863 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */; };
 		C9B1B9E11F36DD6D00CEB863 /* StringAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */; };
 		FD1AD13E1F6F5E9A00F3810E /* ClimbStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */; };
+		FD42F00D1F73980800B0251D /* MaximumSubarraySum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */; };
 		FDD310041F721DB800323931 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD310031F721DB800323931 /* Array.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlgorithms.swift; sourceTree = "<group>"; };
 		FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbStairs.swift; sourceTree = "<group>"; };
+		FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumSubarraySum.swift; sourceTree = "<group>"; };
 		FDD310031F721DB800323931 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 			children = (
 				C942C6741F3A3782003E3251 /* SubsetSum.swift */,
 				FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */,
+				FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */,
 			);
 			path = "Dynamic Programming";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				FDD310041F721DB800323931 /* Array.swift in Sources */,
 				C942C6751F3A3782003E3251 /* SubsetSum.swift in Sources */,
 				FD1AD13E1F6F5E9A00F3810E /* ClimbStairs.swift in Sources */,
+				FD42F00D1F73980800B0251D /* MaximumSubarraySum.swift in Sources */,
 				C9B1B9E11F36DD6D00CEB863 /* StringAlgorithms.swift in Sources */,
 				C9B1B9DF1F36CA9D00CEB863 /* Tree.swift in Sources */,
 				C91C4BEB1F2FABF900748127 /* Matrix.swift in Sources */,
