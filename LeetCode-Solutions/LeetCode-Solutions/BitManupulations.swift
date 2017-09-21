@@ -35,5 +35,24 @@ func reverseBits() -> Int {
     return 0
 }
 
+func getSum(_ a: Int, _ b: Int) -> Int {
+    var aa = a
+    var bb = b
+    var i = 0
+    var sum = 0
+    while( aa != 0 && bb != 0 ){
+        let k = aa & 1
+        let r = bb & 1
+        let c = k & r
+        aa = aa >> 1
+        bb = bb >> 1
+        let power = NSDecimalNumber(decimal :pow(2, i) )
+        sum = sum + c * Int(power)
+        i = i + 1
+    }
+    return sum
+}
+
+
 
 

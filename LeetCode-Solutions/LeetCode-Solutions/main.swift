@@ -8,6 +8,9 @@
 
 import Foundation
 
+let k = getSum(3,2)
+print(k)
+
 /*
 var a = [9,9,9]
 let k = plusOne(a)
