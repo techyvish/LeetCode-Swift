@@ -16,17 +16,23 @@ func swap( a:inout [Int], p: Int , q:Int ) {
 }
 
 func partition(  a:inout [Int], p:Int, q:Int ) -> Int {
-    let t = p
+    var k = p
     let n = q
-    var i = t
-    for s in t..<n  {
-        if a[s] <= a[n] {
-            swap(a: &a, p: s, q: i)
-            i = i + 1
+    for i in p..<n  {
+        // choose last element as pivote
+        // if current element is smaller than last
+        // exchange curren with counter
+        // increment counter & current
+        if a[i] <= a[n] {
+            swap(a: &a, p: i, q: k)
+            k = k + 1
         }
     }
-    swap(a: &a, p: n , q: i)
-    return i
+    
+    // swap last element with counter
+    // Fix last elemnt's position in array.
+    swap(a: &a, p: n , q: k)
+    return k // return the position
 }
 
 func quickSort(  a:inout [Int], p: Int, q:Int ) {
