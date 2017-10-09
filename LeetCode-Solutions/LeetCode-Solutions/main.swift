@@ -8,14 +8,18 @@
 
 import Foundation
 
+var a = [2,5,3,4,6,9,8,10,7];
+quickSort(a: &a, p: 0, q: a.count-1)
+print("final")
+
 /*
 let a = maximumSubarray([-2, -3, 4, -1, -2, 1, 5, -3])
 print(a)
 */
 
 
-let k = getSum(3,2)
-print(k)
+//let k = getSum(3,2)
+//print(k)
 
 
 /*
