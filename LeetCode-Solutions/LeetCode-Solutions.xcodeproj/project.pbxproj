@@ -17,6 +17,7 @@
 		FD1AD13E1F6F5E9A00F3810E /* ClimbStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */; };
 		FD42F00D1F73980800B0251D /* MaximumSubarraySum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */; };
 		FD56E4081F8B3D6F0041ACAD /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD56E4071F8B3D6F0041ACAD /* Sorting.swift */; };
+		FD56E40A1F8BE16E0041ACAD /* Tries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD56E4091F8BE16E0041ACAD /* Tries.swift */; };
 		FDD310041F721DB800323931 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD310031F721DB800323931 /* Array.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbStairs.swift; sourceTree = "<group>"; };
 		FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumSubarraySum.swift; sourceTree = "<group>"; };
 		FD56E4071F8B3D6F0041ACAD /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
+		FD56E4091F8BE16E0041ACAD /* Tries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tries.swift; sourceTree = "<group>"; };
 		FDD310031F721DB800323931 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */,
 				FDD310031F721DB800323931 /* Array.swift */,
 				FD56E4071F8B3D6F0041ACAD /* Sorting.swift */,
+				FD56E4091F8BE16E0041ACAD /* Tries.swift */,
 			);
 			path = "LeetCode-Solutions";
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDD310041F721DB800323931 /* Array.swift in Sources */,
+				FD56E40A1F8BE16E0041ACAD /* Tries.swift in Sources */,
 				C942C6751F3A3782003E3251 /* SubsetSum.swift in Sources */,
 				FD1AD13E1F6F5E9A00F3810E /* ClimbStairs.swift in Sources */,
 				FD42F00D1F73980800B0251D /* MaximumSubarraySum.swift in Sources */,
