@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// QuickSort
 func swap( a:inout [Int], p: Int , q:Int ) {
     let t = a[p]
     a[p] = a[q]
@@ -41,7 +41,7 @@ func quickSort(  a:inout [Int], p: Int, q:Int ) {
     
 }
 
-
+// MergeSort
 //----------------------------------------------------------
 
 func mergeSort( a: inout [Int], p: Int , q:Int ){
