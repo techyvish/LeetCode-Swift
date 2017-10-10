@@ -8,9 +8,13 @@
 
 import Foundation
 
-var a = [2,5,8,4,6,9,3,10,7];
-quickSort(a: &a, p: 0, q: a.count-1)
-print("final")
+let words = ["test","est","teke"]
+let trie = Trie(words: words)
+
+
+//var a = [2,5,8,4,6,9,3,10,7];
+//quickSort(a: &a, p: 0, q: a.count-1)
+//print("final")
 
 /*
 let a = maximumSubarray([-2, -3, 4, -1, -2, 1, 5, -3])
