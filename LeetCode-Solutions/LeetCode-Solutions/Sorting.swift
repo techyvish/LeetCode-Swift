@@ -50,6 +50,37 @@ func quickSort(  a:inout [Int], p: Int, q:Int ) {
 // MergeSort
 //----------------------------------------------------------
 
-func mergeSort( a: inout [Int], p: Int , q:Int ){
+func mergeSortWorker(a: inout [Int], p : Int, m: Int, q: Int ){
+    
+    
+    let n1 = m-p
+    let n2 = q-m
+    
+    var L:[Int] = []
+    for i in 0..<n1 {
+        L.append(a[i])
+    }
+    
+    var R:[Int] = []
+    for j in 0..<n2 {
+        R.append(a[j])
+    }
+    
     
 }
+
+func mergeSort( a: inout [Int], p: Int , q:Int ){
+    
+    if ( p < q ) {
+        
+        let m = q/2
+        mergeSort(a: &a , p: p, q: m)
+        mergeSort(a: &a , p: m+1, q: q)
+        
+        mergeSortWorker(a: &a,p: p,m: m,q: q)
+
+    }
+    
+}
+
+
