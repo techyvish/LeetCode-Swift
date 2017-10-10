@@ -8,9 +8,14 @@
 
 import Foundation
 
-let words = ["test","est","teke"]
+var words:[String] = ["oath","eat"]
 let trie = Trie(words: words)
+var grid:[[Character]] = [["o","a","a","n"],
+                          ["o","t","a","e"],
+                          ["o","h","a","n"],
+                          ["o","a","a","n"]]
 
+findWords(grid: &grid, words: words)
 
 //var a = [2,5,8,4,6,9,3,10,7];
 //quickSort(a: &a, p: 0, q: a.count-1)

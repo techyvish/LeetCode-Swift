@@ -29,10 +29,10 @@ class TrieNode {
 
 class Trie {
     
-    var root:TrieNode {
-        get {
-            return TrieNode()
-        }
+    private var root:TrieNode = TrieNode()
+    
+    func getRoot() -> TrieNode {
+        return root
     }
     
     init(words:[String]) {
@@ -55,25 +55,43 @@ class Trie {
 
 }
 
-func findWordWorker(grid: [[Character]], x: Int , y: Int , root: TrieNode, word:inout String, result: inout [String] ) {
+func findWordWorker(grid:inout [[Character]], x: Int , y: Int , root: TrieNode, word:inout String, result: inout [String] ) {
+    
+    if ( x < 0 || x >= grid.count || y < 0 || y >= grid[0].count || grid[x][y] == " " ){
+        return
+    }
+    var root = root
+    if ( root.children[grid[x][y].asciiValue() - Character("a").asciiValue()] != nil ) {
+        word = word + String(grid[x][y])
+        root = root.children[grid[x][y].asciiValue() - Character("a").asciiValue()]!
+        if ( root.is_end == true ){
+            result.append(word)
+        }
+        let c = grid[x][y]
+        grid[x][y] = " "
+        findWordWorker(grid: &grid, x: x - 1 ,  y: y , root: root, word: &word, result: &result)
+        findWordWorker(grid: &grid, x: x + 1 ,  y: y , root: root, word: &word, result: &result)
+        findWordWorker(grid: &grid, x: x  , y: y - 1 , root: root, word: &word, result: &result)
+        findWordWorker(grid: &grid, x: x  , y: y + 1 , root: root, word: &word, result: &result)
+        grid[x][y] = c
+        
+    }
     
 }
 
-func findWords( grid: [[Character]], words: [String]) -> [String] {
+func findWords( grid: inout [[Character]], words: [String]) -> [String] {
     
-    var t = Trie(words: words).root
+    let t = Trie(words: words).getRoot()
     var result:[String] = []
+
     var s:String = ""
-    
     for x in 0..<grid.count {
         for y in 0..<grid[x].count {
-            findWordWorker(grid: grid, x: x, y: y, root:t, word: &s, result: &result)
+            s = ""
+            findWordWorker(grid: &grid, x: x, y: y, root:t, word: &s, result: &result)
         }
     }
-    
-    
-    
-    return []
+    return result
 }
 
 
