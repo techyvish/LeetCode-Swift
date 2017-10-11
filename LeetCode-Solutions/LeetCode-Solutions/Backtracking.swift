@@ -34,7 +34,7 @@ func permute(_ nums: inout [Int] ) -> [[Int]] {
     return res
 }
 
-func combinationsWorker(_ nums: inout[Int] ,_ start: Int , _ tempList: inout [Int], _ list:inout [[Int]]) {
+func combinationsWorker(_ nums: inout [Int] ,_ start: Int , _ tempList: inout [Int], _ list:inout [[Int]]) {
 
     list.append(tempList)
     for i in start..<nums.count {
@@ -54,3 +54,26 @@ func combinations(_ nums: inout[Int] ) -> [[Int]] {
     return list
     
 }
+
+// Recursion in depth
+func recursion(_ currentLoop:Int ,_ noOfLoops:Int ,_ noOfIterations: Int, _ v: inout [Int] ) {
+    
+    if ( currentLoop == noOfLoops ) {
+        print(v)
+        return
+    }
+    
+    for i in 1...noOfIterations {
+        v[currentLoop] = i
+        recursion( currentLoop + 1 , noOfLoops, noOfIterations, &v )
+    }
+}
+
+func test() {
+    var v:[Int] = [Int](repeatElement(0, count: 3))
+    recursion(0, 3, 3, &v )
+    
+}
+
+
+

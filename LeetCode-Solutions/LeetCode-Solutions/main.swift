@@ -8,6 +8,8 @@
 
 import Foundation
 
+//test()
+
 var a = [1,2,3]
 combinations(&a)
 
