@@ -14,7 +14,7 @@ func swap(_ a:inout [Int], p:Int ,q:Int ){
     a[q] = t
 }
 
-func permuteWorker(_ nums: inout [Int],_ start:Int ,_ a: inout [Int],_ res: inout [[Int]] ) {
+func permuteWorker(_ nums: inout [Int],_ start:Int ,_ res: inout [[Int]] ) {
     if ( start == nums.count ) {
         res.append(nums)
         return
@@ -22,14 +22,35 @@ func permuteWorker(_ nums: inout [Int],_ start:Int ,_ a: inout [Int],_ res: inou
     
     for i in start..<nums.count {
         swap(&nums, p: i , q: start)
-        permuteWorker(&nums, start + 1, &a ,&res)
+        permuteWorker(&nums, start + 1 ,&res)
         swap(&nums, p: start , q:i )
     }
 }
 
-func permute(_ nums: inout  [Int] ) -> [[Int]] {
-    var a:[Int] = [Int](repeatElement(0, count: nums.count))
+// Working on same array with different combinations
+func permute(_ nums: inout [Int] ) -> [[Int]] {
     var res:[[Int]] = []
-    permuteWorker(&nums, 0, &a, &res)
+    permuteWorker(&nums, 0 , &res)
     return res
+}
+
+func combinationsWorker(_ nums: inout[Int] ,_ start: Int , _ tempList: inout [Int], _ list:inout [[Int]]) {
+
+    list.append(tempList)
+    for i in start..<nums.count {
+        tempList.append(nums[i])
+        combinationsWorker(&nums, i + 1 , &tempList, &list)
+        tempList.remove(at: tempList.count-1)
+    }
+    
+}
+
+//Working on temporary array with different combinations
+func combinations(_ nums: inout[Int] ) -> [[Int]] {
+    
+    var list:[[Int]] = []
+    var tempList:[Int] = []
+    combinationsWorker(&nums,0, &tempList, &list)
+    return list
+    
 }

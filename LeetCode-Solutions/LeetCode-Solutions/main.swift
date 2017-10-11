@@ -9,7 +9,10 @@
 import Foundation
 
 var a = [1,2,3]
-permute(&a)
+combinations(&a)
+
+//var a = [1,2,3]
+//permute(&a)
 
 //var a:[Int] = [0,2,9,8,2,4,]
 //mergeSort(a: &a, p: 0, q: a.count)
