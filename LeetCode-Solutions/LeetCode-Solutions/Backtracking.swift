@@ -128,7 +128,86 @@ func wordBreak(_ s:String ){
     let k = word_break(s, 0, &str)
 }
 
+/*
+ Given a pattern and a string str, find if str follows the same pattern.
 
+ Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in str.
+
+ Examples:
+ pattern = "abba", str = "dog cat cat dog" should return true.
+ pattern = "abba", str = "dog cat cat fish" should return false.
+ pattern = "aaaa", str = "dog cat cat dog" should return false.
+ pattern = "abba", str = "dog dog dog dog" should return false.
+ Notes:
+ You may assume pattern contains only lowercase letters, and str contains lowercase letters separated by a single space.
+*/
+
+func wordPattern(_ pattern: String, _ string: String) -> Bool {
+    var wordDict = [String:Character]()
+    var charDict = [Character:String]()
+
+    let charArr = [Character](pattern.characters)
+    let words = string.characters.split(separator: " ").map(String.init)
+
+    guard charArr.count == words.count   else {
+        return false
+    }
+
+    for i in 0..<charArr.count {
+
+        let currentWord = words[i]
+        let currentChar = charArr[i]
+
+        if ( wordDict[currentWord] == nil && charDict[currentChar] == nil ){
+            wordDict[currentWord] = currentChar
+            charDict[currentChar] = currentWord
+        } else {
+            if wordDict[currentWord] != currentChar {
+                return false
+            }
+        }
+
+    }
+
+    return true
+}
+
+/*
+ Given two strings s and t, determine if they are isomorphic.
+
+ Two strings are isomorphic if the characters in s can be replaced to get t.
+
+ All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.
+
+ For example,
+ Given "egg", "add", return true.
+ Given "foo", "bar", return false.
+ Given "paper", "title", return true.
+ Note:
+ You may assume both s and t have the same length.
+ */
+
+func isIsomorphic(_ s: String, _ t: String) -> Bool {
+    var stDict = [Character: Int]()
+    var tsDict = [Character: Int]()
+
+    let sChars = [Character](s.characters)
+    let tChars = [Character](t.characters)
+
+    guard sChars.count == tChars.count else {
+        return false
+    }
+
+    for i in 0..<sChars.count {
+        if ( stDict[sChars[i]] != tsDict[tChars[i]] ) {
+            return false
+        }
+        stDict[sChars[i]] = i + 1
+        tsDict[tChars[i]] = i + 1
+    }
+
+    return true
+}
 
 
 

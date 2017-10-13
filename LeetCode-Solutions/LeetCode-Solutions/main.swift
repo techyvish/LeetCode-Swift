@@ -9,6 +9,13 @@
 import Foundation
 
 
+let k = isIsomorphic("ab", "aa")
+
+
+//let str = "abc"
+//let pat = "b c a"
+//let k = wordPattern(str , pat)
+
 wordBreak("ABCD")
 
 //test()
