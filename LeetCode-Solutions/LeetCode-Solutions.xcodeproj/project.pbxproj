@@ -14,6 +14,19 @@
 		C942C6751F3A3782003E3251 /* SubsetSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C942C6741F3A3782003E3251 /* SubsetSum.swift */; };
 		C9B1B9DF1F36CA9D00CEB863 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */; };
 		C9B1B9E11F36DD6D00CEB863 /* StringAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */; };
+		FD06FF6A1F913736004108D1 /* SubsetSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C942C6741F3A3782003E3251 /* SubsetSum.swift */; };
+		FD06FF6B1F913736004108D1 /* ClimbStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */; };
+		FD06FF6C1F913736004108D1 /* MaximumSubarraySum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */; };
+		FD06FF6D1F913736004108D1 /* BitManupulations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91778BE1F2ACF0D00A7587E /* BitManupulations.swift */; };
+		FD06FF6E1F913736004108D1 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91778C01F2AD87200A7587E /* LinkedList.swift */; };
+		FD06FF6F1F913736004108D1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91C4BEA1F2FABF900748127 /* Matrix.swift */; };
+		FD06FF701F913736004108D1 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */; };
+		FD06FF711F913736004108D1 /* StringAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */; };
+		FD06FF721F913736004108D1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD310031F721DB800323931 /* Array.swift */; };
+		FD06FF731F913736004108D1 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD56E4071F8B3D6F0041ACAD /* Sorting.swift */; };
+		FD06FF741F913736004108D1 /* Tries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD56E4091F8BE16E0041ACAD /* Tries.swift */; };
+		FD06FF751F913736004108D1 /* Backtracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AD8BE1F8C92780092ED58 /* Backtracking.swift */; };
+		FD06FF771F913769004108D1 /* LeetCode_String_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD06FF761F913769004108D1 /* LeetCode_String_Tests.swift */; };
 		FD0AD8BF1F8C92780092ED58 /* Backtracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AD8BE1F8C92780092ED58 /* Backtracking.swift */; };
 		FD1AD13E1F6F5E9A00F3810E /* ClimbStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */; };
 		FD42F00D1F73980800B0251D /* MaximumSubarraySum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */; };
@@ -43,6 +56,9 @@
 		C942C6741F3A3782003E3251 /* SubsetSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsetSum.swift; sourceTree = "<group>"; };
 		C9B1B9DE1F36CA9D00CEB863 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		C9B1B9E01F36DD6D00CEB863 /* StringAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlgorithms.swift; sourceTree = "<group>"; };
+		FD06FF621F9136FD004108D1 /* LeetCode-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeetCode-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD06FF661F9136FD004108D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD06FF761F913769004108D1 /* LeetCode_String_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_String_Tests.swift; sourceTree = "<group>"; };
 		FD0AD8BE1F8C92780092ED58 /* Backtracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backtracking.swift; sourceTree = "<group>"; };
 		FD1AD13D1F6F5E9A00F3810E /* ClimbStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbStairs.swift; sourceTree = "<group>"; };
 		FD42F00C1F73980800B0251D /* MaximumSubarraySum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumSubarraySum.swift; sourceTree = "<group>"; };
@@ -59,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD06FF5F1F9136FD004108D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				C91778B61F2ACEF000A7587E /* LeetCode-Solutions */,
+				FD06FF631F9136FD004108D1 /* LeetCode-Tests */,
 				C91778B51F2ACEF000A7587E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C91778B41F2ACEF000A7587E /* LeetCode-Solutions */,
+				FD06FF621F9136FD004108D1 /* LeetCode-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +131,15 @@
 			path = "Dynamic Programming";
 			sourceTree = "<group>";
 		};
+		FD06FF631F9136FD004108D1 /* LeetCode-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FD06FF661F9136FD004108D1 /* Info.plist */,
+				FD06FF761F913769004108D1 /* LeetCode_String_Tests.swift */,
+			);
+			path = "LeetCode-Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +160,23 @@
 			productReference = C91778B41F2ACEF000A7587E /* LeetCode-Solutions */;
 			productType = "com.apple.product-type.tool";
 		};
+		FD06FF611F9136FD004108D1 /* LeetCode-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD06FF691F9136FD004108D1 /* Build configuration list for PBXNativeTarget "LeetCode-Tests" */;
+			buildPhases = (
+				FD06FF5E1F9136FD004108D1 /* Sources */,
+				FD06FF5F1F9136FD004108D1 /* Frameworks */,
+				FD06FF601F9136FD004108D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LeetCode-Tests";
+			productName = "LeetCode-Tests";
+			productReference = FD06FF621F9136FD004108D1 /* LeetCode-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +189,10 @@
 				TargetAttributes = {
 					C91778B31F2ACEEF00A7587E = {
 						CreatedOnToolsVersion = 9.0;
+					};
+					FD06FF611F9136FD004108D1 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -154,9 +209,20 @@
 			projectRoot = "";
 			targets = (
 				C91778B31F2ACEEF00A7587E /* LeetCode-Solutions */,
+				FD06FF611F9136FD004108D1 /* LeetCode-Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD06FF601F9136FD004108D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C91778B01F2ACEEF00A7587E /* Sources */ = {
@@ -176,6 +242,26 @@
 				C91778C11F2AD87200A7587E /* LinkedList.swift in Sources */,
 				C91778BF1F2ACF0D00A7587E /* BitManupulations.swift in Sources */,
 				C91778B81F2ACEF000A7587E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD06FF5E1F9136FD004108D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD06FF6A1F913736004108D1 /* SubsetSum.swift in Sources */,
+				FD06FF6B1F913736004108D1 /* ClimbStairs.swift in Sources */,
+				FD06FF6C1F913736004108D1 /* MaximumSubarraySum.swift in Sources */,
+				FD06FF6D1F913736004108D1 /* BitManupulations.swift in Sources */,
+				FD06FF6E1F913736004108D1 /* LinkedList.swift in Sources */,
+				FD06FF6F1F913736004108D1 /* Matrix.swift in Sources */,
+				FD06FF701F913736004108D1 /* Tree.swift in Sources */,
+				FD06FF711F913736004108D1 /* StringAlgorithms.swift in Sources */,
+				FD06FF721F913736004108D1 /* Array.swift in Sources */,
+				FD06FF771F913769004108D1 /* LeetCode_String_Tests.swift in Sources */,
+				FD06FF731F913736004108D1 /* Sorting.swift in Sources */,
+				FD06FF741F913736004108D1 /* Tries.swift in Sources */,
+				FD06FF751F913736004108D1 /* Backtracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +390,32 @@
 			};
 			name = Release;
 		};
+		FD06FF671F9136FD004108D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LeetCode-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "whitepegion.LeetCode-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		FD06FF681F9136FD004108D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LeetCode-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "whitepegion.LeetCode-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +433,15 @@
 			buildConfigurations = (
 				C91778BC1F2ACEF000A7587E /* Debug */,
 				C91778BD1F2ACEF000A7587E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD06FF691F9136FD004108D1 /* Build configuration list for PBXNativeTarget "LeetCode-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD06FF671F9136FD004108D1 /* Debug */,
+				FD06FF681F9136FD004108D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
