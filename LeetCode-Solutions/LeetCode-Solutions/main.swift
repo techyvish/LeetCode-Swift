@@ -8,10 +8,13 @@
 
 import Foundation
 
+
+wordBreak("ABCD")
+
 //test()
 
-var a = [1,2,3]
-combinations(&a)
+//var a = [1,2,3]
+//combinations(&a)
 
 //var a = [1,2,3]
 //permute(&a)

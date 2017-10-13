@@ -67,13 +67,72 @@ func recursion(_ currentLoop:Int ,_ noOfLoops:Int ,_ noOfIterations: Int, _ v: i
         v[currentLoop] = i
         recursion( currentLoop + 1 , noOfLoops, noOfIterations, &v )
     }
+
 }
 
 func test() {
     var v:[Int] = [Int](repeatElement(0, count: 3))
     recursion(0, 3, 3, &v )
-    
 }
+
+extension String {
+    func index(from: Int) -> Index {
+        return self.index(startIndex, offsetBy: from)
+    }
+    
+    func substring(from: Int) -> String {
+        let fromIndex = index(from: from)
+        return substring(from: fromIndex)
+    }
+    
+    func substring(to: Int) -> String {
+        let toIndex = index(from: to)
+        return substring(to: toIndex)
+    }
+    
+    func substring(with r: Range<Int>) -> String {
+        let startIndex = index(from: r.lowerBound)
+        let endIndex = index(from: r.upperBound)
+        return substring(with: startIndex..<endIndex)
+    }
+}
+
+func subString(_ s:String,_ start:Int,_ end:Int ) -> String {
+    let startIdx = s.index(from: start)
+    let endIdx = s.index(from: end)
+    let range = startIdx..<endIdx
+    return s.substring(with: range)
+}
+
+func word_break(_ s:String,_ start:Int ,_ str:inout [String] ) -> [String] {
+    var res:[String] = []
+    if ( start == s.count ) {
+        res.append("")
+        return res
+    }
+ 
+    for end in start + 1...s.count {
+        let list = word_break(s , end, &str)
+        print(list)
+        let aa = subString(s, start, end)
+        print("\(start)...\(end) -> \(aa)")
+        res.append(aa)
+        
+    }
+    
+    return res
+}
+	
+func wordBreak(_ s:String ){
+    var str:[String] = []
+    let k = word_break(s, 0, &str)
+}
+
+
+
+
+
+
 
 
 
