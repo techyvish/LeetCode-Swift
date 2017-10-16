@@ -58,12 +58,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeetCode-Solutions/Backtracking.swift"
-            timestampString = "529817098.595902"
+            timestampString = "529871654.121266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "wordBreak2(_:dict:)"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
+            landmarkName = "wordPattern2(_:_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeetCode-Solutions/Backtracking.swift"
+            timestampString = "529871654.121615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "wordPattern2Helper(_:_:_:_:_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

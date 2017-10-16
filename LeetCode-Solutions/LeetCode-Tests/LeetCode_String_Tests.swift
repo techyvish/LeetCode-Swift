@@ -40,4 +40,9 @@ class LeetCode_String_Tests: XCTestCase {
         XCTAssertTrue(k == ["AB CD", "ABC D"])
     }
 
+    func testForWordPattern2() {
+        let k = wordPattern2("abab", "pqdqpqdq")
+        XCTAssertTrue(k)
+    }
+
 }

@@ -267,6 +267,62 @@ func wordPattern(_ pattern: String, _ string: String) -> Bool {
 }
 
 /*
+ Given a pattern and a string str, find if str follows the same pattern.
+
+ Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty substring in str.
+
+ Examples:
+ pattern = "abab", str = "redblueredblue" should return true.
+ pattern = "aaaa", str = "asdasdasdasd" should return true.
+ pattern = "aabb", str = "xyzabcxzyabc" should return false.
+ Notes:
+ You may assume both pattern and str contains only lowercase letters.
+ */
+
+func wordPattern2Helper(_ pattern:[Character],_ str:String,_ i:Int,_ j:Int,_ map: inout [String:String] ) -> Bool {
+
+    if ( i == pattern.count && j == str.count ){
+        return true
+    }
+
+    if ( i >= pattern.count || j >= str.count ){
+        return false
+    }
+
+
+    let c = pattern[i]
+
+    for k in j+1...str.count {
+
+        let sub = subString(str, j, k)
+        if !map.keys.contains(String(c)) &&  !map.values.contains(sub) {
+            map[String(c)] = sub
+            if wordPattern2Helper(pattern, str, i + 1, k, &map) {
+                return true
+            }
+            map.removeValue(forKey: String(c))
+        }else {
+            if map.keys.contains(String(c)) && map[String(c)] == sub {
+                if wordPattern2Helper(pattern, str, i + 1, k, &map) {
+                    return true
+                }
+            }
+        }
+
+    }
+    return false
+
+}
+
+func wordPattern2(_ pattern:String,_ str:String) ->  Bool {
+
+    var map:[String:String] = [:]
+    let p = [Character](pattern.characters)
+    return wordPattern2Helper(p, str, 0, 0, &map)
+
+}
+
+/*
  Given two strings s and t, determine if they are isomorphic.
 
  Two strings are isomorphic if the characters in s can be replaced to get t.
