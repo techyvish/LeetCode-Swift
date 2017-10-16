@@ -36,8 +36,8 @@ class LeetCode_String_Tests: XCTestCase {
     }
 
     func testForWordBreak2() {
-        let k = wordBreak2("catsanddog",dict:["cat", "cats", "and", "sand", "dog"])
-        XCTAssertTrue(k == ["cats and dog", "cat sand dog"])
+        let k = wordBreak2("ABCD",dict:["AB", "CD", "ABC", "D"])
+        XCTAssertTrue(k == ["AB CD", "ABC D"])
     }
 
 }

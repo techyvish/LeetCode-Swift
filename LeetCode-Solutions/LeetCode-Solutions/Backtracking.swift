@@ -191,35 +191,34 @@ A solution is ["cats and dog", "cat sand dog"].
 */
 
 
-func wordBreak2Helper(_ s:String,_ start:Int,_ dict:[String]) -> Bool {
+func wordBreak2Helper(_ s:String,_ start:Int,_ dict:[String]) -> [String] {
+
+    var res:[String] = []
     if ( start == s.count ) {
-        return true
+        res.append("")
+        return res
     }
 
-    for word in dict {
-        let len = word.count
-        let end = start + len
 
-
-        if ( end > s.count) {
-            continue
-        }
+    for end in start + 1...s.count {
 
         let aa = subString(s, start, end)
-        print(aa)
+        if ( dict.contains(aa) ) {
 
-        if ( aa == word ) {
-            if (wordBreakHelper(s , end, dict)) {
-                return true
+            let r  = wordBreak2Helper(s , end, dict)
+            for w in r {
+                res.append(aa + ( w == "" ? "" : " ") + w)
             }
         }
+        
     }
 
-    return false
+    return res
 }
 
-func wordBreak2(_ s:String, dict:[String] ){
+func wordBreak2(_ s:String, dict:[String]) -> [String] {
     let k = wordBreak2Helper(s, 0, dict )
+    return k
 }
 
 

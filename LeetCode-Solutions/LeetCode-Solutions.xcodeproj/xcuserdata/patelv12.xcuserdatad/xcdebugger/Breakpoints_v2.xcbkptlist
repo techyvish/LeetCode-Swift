@@ -57,29 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LeetCode-Tests/LeetCode_String_Tests.swift"
-            timestampString = "529808225.230645"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "testForWordPatterns2()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "LeetCode-Solutions/Backtracking.swift"
-            timestampString = "529808225.230753"
+            timestampString = "529817098.595902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "wordBreak(_:dict:)"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "wordBreak2(_:dict:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
