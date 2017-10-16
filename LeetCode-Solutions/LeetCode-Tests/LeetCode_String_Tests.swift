@@ -13,11 +13,9 @@ class LeetCode_String_Tests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 
@@ -26,7 +24,6 @@ class LeetCode_String_Tests: XCTestCase {
         XCTAssert(k==false)
     }
 
-
     func testForWordPatterns() {
         let str = "abc"
         let pat = "b c a"
@@ -34,11 +31,13 @@ class LeetCode_String_Tests: XCTestCase {
         XCTAssert(k==true)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testForWordBreakSimple() {
+        wordBreak("leetcode",dict: ["leet","codee"])
+    }
+
+    func testForWordBreak2() {
+        let k = wordBreak2("catsanddog",dict:["cat", "cats", "and", "sand", "dog"])
+        XCTAssertTrue(k == ["cats and dog", "cat sand dog"])
     }
 
 }

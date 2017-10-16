@@ -119,29 +119,109 @@ You may assume both pattern and str contains only lowercase letters.
 */
 
 
-func word_break(_ s:String,_ start:Int ,_ str:inout [String] ) -> [String] {
-    var res:[String] = []
+func wordBreakTemplateHelper(_ s:String,_ start:Int) {
     if ( start == s.count ) {
-        res.append("")
-        return res
+        return
     }
  
     for end in start + 1...s.count {
-        let list = word_break(s , end, &str)
-        print(list)
         let aa = subString(s, start, end)
-        print("\(start)...\(end) -> \(aa)")
-        res.append(aa)
-        
+        print(aa)
+        wordBreakTemplateHelper(s , end)
     }
-    
-    return res
+
+    return
 }
 	
-func wordBreak(_ s:String ){
-    var str:[String] = []
-    let k = word_break(s, 0, &str)
+func wordBreakTemplate(_ s:String ){
+    let k = wordBreakTemplateHelper(s, 0)
 }
+
+/*
+ Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+
+ For example, given
+ s = "leetcode",
+ dict = ["leet", "code"].
+
+ Return true because "leetcode" can be segmented as "leet code".
+*/
+
+func wordBreakHelper(_ s:String,_ start:Int,_ dict:[String]) -> Bool {
+    if ( start == s.count ) {
+        return true
+    }
+
+    for word in dict {
+        let len = word.count
+        let end = start + len
+
+
+        if ( end > s.count) {
+            continue
+        }
+
+        let aa = subString(s, start, end)
+        print(aa)
+
+        if ( aa == word ) {
+            if (wordBreakHelper(s , end, dict)) {
+                return true
+            }
+        }
+    }
+
+    return false
+}
+
+func wordBreak(_ s:String, dict:[String] ){
+    let k = wordBreakHelper(s, 0, dict )
+}
+
+/*
+Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. You may assume the dictionary does not contain duplicate words.
+
+Return all such possible sentences.
+
+For example, given
+s = "catsanddog",
+dict = ["cat", "cats", "and", "sand", "dog"].
+
+A solution is ["cats and dog", "cat sand dog"].
+*/
+
+
+func wordBreak2Helper(_ s:String,_ start:Int,_ dict:[String]) -> Bool {
+    if ( start == s.count ) {
+        return true
+    }
+
+    for word in dict {
+        let len = word.count
+        let end = start + len
+
+
+        if ( end > s.count) {
+            continue
+        }
+
+        let aa = subString(s, start, end)
+        print(aa)
+
+        if ( aa == word ) {
+            if (wordBreakHelper(s , end, dict)) {
+                return true
+            }
+        }
+    }
+
+    return false
+}
+
+func wordBreak2(_ s:String, dict:[String] ){
+    let k = wordBreak2Helper(s, 0, dict )
+}
+
 
 /*
  Given a pattern and a string str, find if str follows the same pattern.

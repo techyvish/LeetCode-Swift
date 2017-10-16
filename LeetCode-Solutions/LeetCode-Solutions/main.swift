@@ -16,7 +16,7 @@ let k = isIsomorphic("ab", "aa")
 //let pat = "b c a"
 //let k = wordPattern(str , pat)
 
-wordBreak("ABCD")
+
 
 //test()
 
