@@ -8,38 +8,51 @@
 
 import Foundation
 
-struct Vertex : Equatable {
+class Vertex : Equatable {
     static func ==(lhs: Vertex, rhs: Vertex) -> Bool {
         return lhs.data == rhs.data
     }
 
-    var data:Int
+    var data:Int = 0
     var neighbours:[Edge] = []
 
-    mutating func addNeighbour(edge: Edge){
+    func addNeighbour(edge: Edge){
         neighbours.append(edge)
     }
 
 }
 
 extension Vertex {
-    init(data:Int) {
+    convenience init(data:Int) {
+        self.init()
         self.data = data
         self.neighbours = []
     }
 }
 
 
-struct Edge {
+class Edge {
 
-    var neighbour: Vertex
-    var weight: Int
+    var neighbour: Vertex!
+    var weight: Int = 0
+
+    init() {
+    }
 
 }
 
-struct Graph {
 
-    var vertices:[Vertex]
+extension Edge {
+    convenience init (neighbour: Vertex, weight: Int) {
+        self.init()
+        self.neighbour = neighbour
+        self.weight = weight
+    }
+}
+
+class Graph {
+
+    var vertices:[Vertex] = []
     var isDirected = false
 
     func indexOfVertex(_ vertex: Vertex) -> Int? {
@@ -49,8 +62,8 @@ struct Graph {
         return nil;
     }
 
-    mutating func addEdge(source:Vertex, destination:Vertex, weight:Int ){
-        let  edge = Edge(neighbour: destination, weight: weight)
+    func addEdge(source:Vertex, destination:Vertex, weight:Int ){
+        let edge = Edge(neighbour: destination, weight: weight)
 
         vertices[indexOfVertex(source)!].addNeighbour(edge: edge)
 
@@ -60,12 +73,53 @@ struct Graph {
         }
     }
 
+    convenience init ( vertices: [Vertex], isDirected: Bool ) {
+        self.init()
+        self.vertices = vertices
+        self.isDirected = isDirected
+    }
+
 }
 
-func dfs(_ graph:Graph) {
+func dfsUtil(_ v:Vertex, _ g:Graph, visited: inout [Bool], _ a: inout [Int]) {
 
+    visited[g.indexOfVertex(v)!] = true
+    a.append(v.data)
+
+    for edge in v.neighbours {
+        let vertex = edge.neighbour
+        if ( visited[g.indexOfVertex(vertex!)!] == false ) {
+            dfsUtil(vertex!, g, visited: &visited, &a)
+        }
+    }
 
 }
 
+func dfs(_ g:Graph,_ a: inout [Int]) {
 
+    var visited:[Bool] = [Bool](repeatElement(false, count: g.vertices.count))
+    dfsUtil( g.vertices[0] , g, visited: &visited, &a)
+
+}
+
+func dfsUtilForTopologicalSort(_ v:Vertex, _ g:Graph, visited: inout [Bool], _ a: inout [Int]) {
+
+    visited[g.indexOfVertex(v)!] = true
+
+    for edge in v.neighbours {
+
+        let vertex = edge.neighbour
+        if ( visited[g.indexOfVertex(vertex!)!] == false ) {
+            dfsUtilForTopologicalSort(vertex!, g, visited: &visited, &a)
+        }
+
+    }
+    a.append(v.data)
+
+}
+
+func topologicalSort(_ g:Graph,_ a: inout [Int] ){
+    var visited:[Bool] = [Bool](repeatElement(false, count: g.vertices.count))
+    dfsUtilForTopologicalSort( g.vertices[0] , g, visited: &visited, &a)
+}
 
