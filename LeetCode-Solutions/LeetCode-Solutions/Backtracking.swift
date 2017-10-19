@@ -359,7 +359,16 @@ func isIsomorphic(_ s: String, _ t: String) -> Bool {
     return true
 }
 
+/*
+Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
 
+The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+ */
+
+func isValidSudoku(_ board:[[Character]]) -> Bool {
+
+    return false
+}
 
 
 
