@@ -78,13 +78,15 @@ func twosCpomplement(n: Int) -> Int {
 
 func isPalindromNumber(n:Int) -> Bool {
 
-    let l = 0
-    let r = MemoryLayout<Int>.size * 8
+    var l = 0
+    var r = MemoryLayout<Int>.size * 8
 
     while ( l < r ){
-        if ( checkKthBitSet(n: n, k: l+1) != checkKthBitSet(n: n, k: r-1) ){
+        if ( checkKthBitSet(n: n, k: l) != checkKthBitSet(n: n, k: r) ){
             return false
         }
+        l = l + 1
+        r = r - 1
     }
 
     return true

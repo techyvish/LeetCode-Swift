@@ -36,27 +36,3 @@ func isPalindrom(a:[Int], i:  Int , j: Int ) -> Bool {
     }
 }
 
-func decToBinIsPalindrom2(_ n:Int ) -> Bool {
-
-    var d = 0
-    var k = n
-    while k  != 0 {
-        d = k % 2
-        k = k / 2
-    }
-
-    var rev:Int = 0
-    var a:Int = 0
-    while ( n != 0 ){
-        d = d  % 10
-        k = k / 10
-        rev = rev * 10 + d
-        a = rev
-    }
-
-    if ( a==rev) {
-        return true
-    }
-    return false
-}
-
