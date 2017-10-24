@@ -52,6 +52,48 @@ func getSum(_ aa: Int, _ bb: Int) -> Int {
     
 }
 
+func setKthbit(n:Int ,k:Int){
+    var p = n
+    p = p & ( 1 << k )
+}
+
+func toggleKthPosition(n:Int,k:Int){
+    var p = n
+    p = p ^ ( 1 << k )
+}
+
+func checkKthBitSet(n:Int,k:Int) -> Bool {
+    let p = n
+    return (p & ( 1 << k)) == 1
+}
+
+// 1's complement
+func invertEverybitInNumbrerOrOnesComplement(n: Int) -> Int {
+    return (~n)
+}
+
+func twosCpomplement(n: Int) -> Int {
+    return (~n)+1
+}
+
+func isPalindromNumber(n:Int) -> Bool {
+
+    let l = 0
+    let r = MemoryLayout<Int>.size * 8
+
+    while ( l < r ){
+        if ( checkKthBitSet(n: n, k: l+1) != checkKthBitSet(n: n, k: r-1) ){
+            return false
+        }
+    }
+
+    return true
+}
+
+
+
+
+
 
 
 

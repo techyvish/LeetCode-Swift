@@ -24,6 +24,8 @@ class LeetCode_Math_Tests: XCTestCase {
 
         XCTAssertTrue(decToBinIsPalindrom(585))
         XCTAssertFalse(decToBinIsPalindrom(22))
+        XCTAssertTrue(decToBinIsPalindrom2(585))
+
 
     }
 

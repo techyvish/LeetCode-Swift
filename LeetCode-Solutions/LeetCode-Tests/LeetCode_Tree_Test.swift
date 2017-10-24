@@ -19,4 +19,29 @@ class LeetCode_Tree_Tests: XCTestCase {
         super.tearDown()
     }
 
+
+    func testForHasPathSum() {
+        let treeRoot = TreeNode(1)
+
+        let sib1 =  TreeNode(2)
+        let sib2 =  TreeNode(3)
+
+        let sib11 =  TreeNode(4)
+        let sib12 =  TreeNode(5)
+
+        let sib21 =  TreeNode(6)
+        let sib22 =  TreeNode(7)
+
+        treeRoot.left = sib1
+        treeRoot.right = sib2
+
+        sib1.left = sib11
+        sib1.right = sib12
+
+        sib2.left = sib21
+        sib2.right = sib22
+
+        XCTAssertTrue( hasPathSum(treeRoot, 8, 0))
+    }
+
 }

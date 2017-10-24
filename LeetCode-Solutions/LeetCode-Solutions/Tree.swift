@@ -110,3 +110,66 @@ Note: Do not use class member/global/static variables to store states. Your seri
 */
 
 
+/*
+ Given sorted element create binary serach tree
+ */
+
+func createBinarySearchTree(arr:[Int]) -> TreeNode? {
+
+    let mid = (arr.count)/2
+    let left = createBinarySearchTree(arr: Array( arr[0...mid])) ?? nil
+    let right = createBinarySearchTree(arr: Array(arr[mid+1..<arr.count])) ?? nil
+    let t = TreeNode(arr[mid])
+    t.left = left
+    t.right = right
+    return t
+
+}
+
+/*
+ has path sum : check wether tree has path witch equals to given sum
+ */
+
+func hasPathSum(_ root: TreeNode?, _ sum:Int,_ currenSum: Int ) -> Bool {
+
+    if ( root == nil ) {
+        return ( currenSum == sum ) ? true : false
+    }
+    return ( hasPathSum(root!.left, sum,  root!.val + currenSum) || hasPathSum(root!.right, sum,  root!.val + currenSum))
+
+}
+
+/*
+ print all paths
+ */
+
+func printAllPaths( _ root: TreeNode?,_ list: inout [TreeNode] ){
+
+    if ( root == nil ){
+        return
+    }
+
+    list.append(root!)
+    printAllPaths(root?.left, &list)
+    printAllPaths(root?.right, &list)
+
+    if ( root?.left == nil && root?.right == nil ){
+        // print path
+    }
+    list.remove(at: list.index{$0 === root! }!)
+}
+
+/*
+ Least Common Ancestor
+ */
+
+//func leastCommonAncestor(_ root: TreeNode? ) -> TreeNode {
+//
+//    if ( root?.left == nil && root?.right == nil  ){
+//        return root!
+//    }
+//}
+
+
+
+
