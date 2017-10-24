@@ -8,12 +8,28 @@
 
 import Foundation
 
-public class ListNode {
+public class ListNode  {
     public var val:Int
     public var next:ListNode?
+    public var position:Int
     public init(_ val:Int) {
         self.val = val
         self.next = nil
+        self.position = val
+    }
+
+    ///   - rhs: Another value to compare.
+
+}
+
+extension ListNode: Comparable {
+
+    public static func ==(lhs: ListNode, rhs: ListNode) -> Bool {
+        return lhs.position == rhs.position
+    }
+
+    public static func <(lhs: ListNode, rhs: ListNode) -> Bool {
+        return lhs.position < rhs.position
     }
 }
 
@@ -96,5 +112,45 @@ func reverseList_recursive(_ head: ListNode?) -> ListNode? {
     head?.next?.next = head
     head?.next = nil // Don't forget this o/w list will end up in cycle.
     return head
+}
+
+func detectLoop(_ head: ListNode? ) -> Bool {
+
+    var slowp = head?.next
+    var fastp = head?.next
+
+    while ( slowp != nil && fastp != nil && fastp?.next != nil ){
+        slowp = slowp?.next
+        fastp = fastp?.next?.next
+
+        if ( slowp == fastp ) {
+            return true 
+        }
+    }
+
+    return false
+}
+
+func findKthElement(_ k:Int, _ head:ListNode? ) -> Int {
+
+    guard let head = head else { return 0 }
+    var start:ListNode? = head
+    var end:ListNode? = head
+    var counter:Int = 1
+
+    while ( 1 == 1 ) {
+        end = end?.next
+        if ( counter == k  ) { break }
+
+        counter += 1
+
+    }
+
+    while end != nil  {
+        end = end?.next
+        start = start?.next
+    }
+
+    return (start?.val)!
 }
 
