@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class TreeNode : CustomStringConvertible {
-    
+public class TreeNode : CustomStringConvertible, Equatable {
+
     public var val:Int
     public var left:TreeNode?
     public var right:TreeNode?
@@ -22,6 +22,10 @@ public class TreeNode : CustomStringConvertible {
     
     public var description: String {
         return "\(val)"
+    }
+
+    public static func ==(lhs:TreeNode, rhs:TreeNode) -> Bool {
+        return lhs.val == rhs.val
     }
 }
 
@@ -163,13 +167,44 @@ func printAllPaths( _ root: TreeNode?,_ list: inout [TreeNode] ){
  Least Common Ancestor
  */
 
-//func leastCommonAncestor(_ root: TreeNode? ) -> TreeNode {
-//
-//    if ( root?.left == nil && root?.right == nil  ){
-//        return root!
-//    }
-//}
+func leastCommonAncestor(_ root: TreeNode?, a:TreeNode, b:TreeNode ) -> TreeNode? {
 
+    if ( root == nil ) {
+        return root
+    }
+
+    if ( root == a  || root == b ){
+        return root
+    }
+
+    let leftLCA = leastCommonAncestor(root?.left, a: a, b: b)
+    let rightLCA = leastCommonAncestor(root?.right, a: a , b: b)
+
+    if ( leftLCA != nil && rightLCA != nil ) {
+        return root
+    }
+
+    if ( leftLCA == nil ){
+        return rightLCA
+    }
+
+    return leftLCA
+}
+
+
+func isBinarySearchTree(root:TreeNode?, min: Int , max: Int ) -> Bool {
+
+    if ( root == nil ) {
+        return true
+    }
+
+    if ( (root?.val)! >= min && (root?.val)! <= max ){
+        return true
+    }
+    return ( isBinarySearchTree(root: root?.left, min: min , max: (root?.val)!) &&
+             isBinarySearchTree(root: root?.left, min: (root?.val)! , max: max) )
+
+}
 
 
 
