@@ -169,17 +169,23 @@ func printAllPaths( _ root: TreeNode?,_ list: inout [TreeNode] ){
 
 func leastCommonAncestor(_ root: TreeNode?, a:TreeNode, b:TreeNode ) -> TreeNode? {
 
+    // Base case if root is nil return root
     if ( root == nil ) {
         return root
     }
 
+    // check if root matches any passed in node
+    // if yes return root
     if ( root == a  || root == b ){
         return root
     }
 
+    // else continue exploring tree's left subtree and right subtree
     let leftLCA = leastCommonAncestor(root?.left, a: a, b: b)
     let rightLCA = leastCommonAncestor(root?.right, a: a , b: b)
 
+    // if we found node's in both right and left subtree of
+    // current root the return current root.
     if ( leftLCA != nil && rightLCA != nil ) {
         return root
     }
@@ -201,8 +207,8 @@ func isBinarySearchTree(root:TreeNode?, min: Int , max: Int ) -> Bool {
     if ( (root?.val)! >= min && (root?.val)! <= max ){
         return true
     }
-    return ( isBinarySearchTree(root: root?.left, min: min , max: (root?.val)!) &&
-             isBinarySearchTree(root: root?.left, min: (root?.val)! , max: max) )
+    return ( isBinarySearchTree(root: root?.left, min: min, max: (root?.val)!) &&
+             isBinarySearchTree(root: root?.left, min: (root?.val)!, max: max) )
 
 }
 

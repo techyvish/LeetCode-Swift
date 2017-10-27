@@ -370,7 +370,33 @@ func isValidSudoku(_ board:[[Character]]) -> Bool {
     return false
 }
 
+/*
+    Permutation II
 
+     [
+     [1,1,2],
+     [1,2,1],
+     [2,1,1]
+     ]
+ */
 
+func permuteUniqueWorker(_ a:[Int] ,_ start: Int,_ res: inout [[Int]]  ){
+
+    if ( start == a.count - 1){
+        return
+    }
+
+    for i in start..<a.count {
+
+        permuteUniqueWorker(a, start + 1, &res)
+
+    }
+
+}
+
+func permuteUnique(_ a:[Int] ) -> [[Int]] {
+
+    return []
+}
 
 
