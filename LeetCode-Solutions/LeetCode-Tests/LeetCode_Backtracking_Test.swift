@@ -18,5 +18,19 @@ class LeetCode_Backtracking_Tests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
+
+    func testForPermuteUnique() {
+
+        let a = [1,1,2]
+        permuteUnique(a)
+
+
+    }
+
+    func testForPhoneNumberLetterCombination() {
+
+        phoneNumbrerLetterCombinations()
+        
+    }
+
 }

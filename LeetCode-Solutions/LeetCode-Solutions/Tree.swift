@@ -212,5 +212,13 @@ func isBinarySearchTree(root:TreeNode?, min: Int , max: Int ) -> Bool {
 
 }
 
+/*
+ LCA in n-ary tree.
+ */
+
+func leastCommonAncestor() {
+
+}
+
 
 

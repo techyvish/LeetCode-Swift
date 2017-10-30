@@ -8,6 +8,24 @@
 
 import Foundation
 
+
+/*
+     implement LRUCache using doubly linked list
+     func AddNode() // Adds new node after heade
+     func RemoveNode() // Removes node
+     func MoveToHead() // Move current node after head
+     func PopTail() // Removes node before tail
+
+     cache:[key:Node]
+     head:Node
+     tail:Node
+ */
+public class LRUCacheDLL {
+
+
+}
+
+
 public class ListNode  {
     public var val:Int
     public var next:ListNode?

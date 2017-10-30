@@ -25,16 +25,16 @@ struct LRUCache {
         }
 
         guard  counter < self.capacity else {
-            let r = cntDict.sorted(by: { (t1, t2) -> Bool in
+            let sortedDict = cntDict.sorted(by: { (t1, t2) -> Bool in
                 return t1.value < t2.value
             })
-            let t1 = r.first
-            let t2 = r.last
-            valDict.remove(at: valDict.index(forKey: (t1?.key)!)!)
-            cntDict.remove(at: cntDict.index(forKey: (t1?.key)!)!)
+            let hi = sortedDict.first
+            let lo = sortedDict.last
+            valDict.remove(at: valDict.index(forKey: (hi?.key)!)!)
+            cntDict.remove(at: cntDict.index(forKey: (hi?.key)!)!)
             
             valDict[key] = val
-            cntDict[key] = (t2?.value)! + 1
+            cntDict[key] = (lo?.value)! + 1
 
             return
         }
@@ -58,8 +58,3 @@ struct LRUCache {
 
 }
 
-func leastRecentlyUsedCache() {
-
-
-
-}

@@ -38,6 +38,7 @@
 		FDE853851FA2E4E6006CF51D /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE853841FA2E4E6006CF51D /* Hash.swift */; };
 		FDE853871FA2E88A006CF51D /* LeetCode_Hash_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE853861FA2E88A006CF51D /* LeetCode_Hash_Tests.swift */; };
 		FDE853881FA2E8A1006CF51D /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE853841FA2E4E6006CF51D /* Hash.swift */; };
+		FDE8538A1FA6B0B4006CF51D /* OtherTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE853891FA6B0B4006CF51D /* OtherTopics.swift */; };
 		FDF820721F9EA25100D5502E /* LeetCode_LinkedList_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF820711F9EA25100D5502E /* LeetCode_LinkedList_Tests.swift */; };
 		FDF820761F9F0BE300D5502E /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF820751F9F0BE300D5502E /* Math.swift */; };
 		FDF820781F9F0C1700D5502E /* LeetCode_Math_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF820771F9F0C1700D5502E /* LeetCode_Math_Tests.swift */; };
@@ -81,6 +82,7 @@
 		FDD310031F721DB800323931 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		FDE853841FA2E4E6006CF51D /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		FDE853861FA2E88A006CF51D /* LeetCode_Hash_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_Hash_Tests.swift; sourceTree = "<group>"; };
+		FDE853891FA6B0B4006CF51D /* OtherTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTopics.swift; sourceTree = "<group>"; };
 		FDF820711F9EA25100D5502E /* LeetCode_LinkedList_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_LinkedList_Tests.swift; sourceTree = "<group>"; };
 		FDF820751F9F0BE300D5502E /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		FDF820771F9F0C1700D5502E /* LeetCode_Math_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_Math_Tests.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				FDFC5E841F97CBF40076A621 /* Graph.swift */,
 				FDF820751F9F0BE300D5502E /* Math.swift */,
 				FDE853841FA2E4E6006CF51D /* Hash.swift */,
+				FDE853891FA6B0B4006CF51D /* OtherTopics.swift */,
 			);
 			path = "LeetCode-Solutions";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE8538A1FA6B0B4006CF51D /* OtherTopics.swift in Sources */,
 				FDD310041F721DB800323931 /* Array.swift in Sources */,
 				FD56E40A1F8BE16E0041ACAD /* Tries.swift in Sources */,
 				FDFC5E851F97CBF40076A621 /* Graph.swift in Sources */,

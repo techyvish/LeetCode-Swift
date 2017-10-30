@@ -380,23 +380,70 @@ func isValidSudoku(_ board:[[Character]]) -> Bool {
      ]
  */
 
-func permuteUniqueWorker(_ a:[Int] ,_ start: Int,_ res: inout [[Int]]  ){
+func permuteUniqueWorker(_ a:inout [Int] ,_ start: Int,_ res: inout [[Int]],_ used:inout [Bool]) {
 
+    print(used)
     if ( start == a.count - 1){
+        res.append(a)
         return
     }
 
     for i in start..<a.count {
-
-        permuteUniqueWorker(a, start + 1, &res)
-
+        if ( used[i] == true || ( i > 0 && a[i] == a[i-1] && !used[i-1])) {
+            print(used)
+            continue
+        }
+        used[i] = true
+        swap(&a, p: i , q: start)
+        permuteUniqueWorker(&a, start + 1 ,&res, &used)
+        used[i] = false
+        swap(&a, p: start , q:i )
     }
 
 }
 
 func permuteUnique(_ a:[Int] ) -> [[Int]] {
-
-    return []
+    var k = a
+    var res:[[Int]] = []
+    var used:[Bool] = [Bool](repeatElement(false, count: a.count))
+    permuteUniqueWorker(&k,0,&res,&used)
+    return res
 }
 
+func phoneNumbrerLetterCombinationsWorker(_ numbers:[Character:[Character]],_ start:Int,_ input:[Character], _ res:inout [[Character]] ,_ j:Int,_ temp:inout [Character]) {
+
+    if ( start == input.count ) {
+        // clean up
+        if ( !temp.contains(" ") ) {
+        	res.append(temp)
+        }
+        return
+    }
+
+    for j in 0..<4 {
+        temp.append(numbers[input[start]]![j])
+        phoneNumbrerLetterCombinationsWorker(numbers, start + 1, input, &res, j + 1, &temp)
+        temp.removeLast()
+    }
+
+}
+
+func phoneNumbrerLetterCombinations() {
+
+    var numbers:[Character:[Character]] = [:]
+    numbers["2"] = ["a","b","c"," "]
+    numbers["3"] = ["d","e","f"," "]
+    numbers["4"] = ["g","h","i"," "]
+    numbers["5"] = ["j","k","l"," "]
+    numbers["6"] = ["m","n","o"," "]
+    numbers["7"] = ["p","q","r","s"]
+    numbers["8"] = ["s","t","u"," "]
+    numbers["9"] = ["w","x","y","z"]
+
+    var res:[[Character]] = []
+    var temp:[Character] = []
+    phoneNumbrerLetterCombinationsWorker(numbers,0,[Character]("23".characters) ,&res, 0, &temp )
+    print(res)
+    
+}
 
