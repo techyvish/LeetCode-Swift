@@ -50,34 +50,61 @@ func quickSort(  a:inout [Int], p: Int, q:Int ) {
 // MergeSort
 //----------------------------------------------------------
 
-func mergeSortWorker(a: inout [Int], p : Int, m: Int, q: Int ){
+func mergeSortWorker(a: inout [Int], l : Int, m: Int, r: Int ){
+
+    let n1 = m - l + 1
+    let n2 = r - m
     
-    
-    let n1 = m-p
-    let n2 = q-m
-    
-    var L:[Int] = []
+    var L:[Int] = [Int](repeatElement(0, count: n1))
+    var R:[Int] = [Int](repeatElement(0, count: n2))
+
     for i in 0..<n1 {
-        L.append(a[i])
+        L[i] = a[l+i]
     }
-    
-    var R:[Int] = []
+
     for j in 0..<n2 {
-        R.append(a[j])
+        R[j] = a[m+1+j]
     }
-    
-    
+
+    var i = 0
+    var j = 0
+    var k = l // Imp: Don't forget you want to only update elements between provided range.
+
+    while  ( i < n1 && j < n2 ) {
+        if ( L[i] <= R[j] ){
+            a[k] = L[i]
+            i = i + 1
+        } else {
+            a[k] = R[j]
+            j = j + 1
+        }
+        k = k + 1 // keep moving index pointer for main array
+    }
+
+    while ( i < n1 ) {
+        a[k] = L[i]
+        i = i + 1
+        k = k + 1
+    }
+
+    while ( j < n2 ) {
+        a[k] = R[j]
+        j = j + 1
+        k = k + 1
+    }
+
 }
 
-func mergeSort( a: inout [Int], p: Int , q:Int ){
+func mergeSort( a: inout [Int], l: Int , r:Int ){
     
-    if ( p < q ) {
+    if ( l < r ) {
         
-        let m = q/2
-        mergeSort(a: &a , p: p, q: m)
-        mergeSort(a: &a , p: m+1, q: q)
+        let m = (l+r)/2
+
+        mergeSort(a: &a , l: l, r: m)
+        mergeSort(a: &a , l: m+1, r: r)
         
-        mergeSortWorker(a: &a,p: p,m: m,q: q)
+        mergeSortWorker(a: &a , l: l , m: m , r: r)
 
     }
     

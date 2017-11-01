@@ -447,3 +447,10 @@ func phoneNumbrerLetterCombinations() {
     
 }
 
+/*
+     Palindrom partitioning
+     inout : "aab"
+     output : [["aa","b"],
+               ["a","b","c"]]
+ */
+
